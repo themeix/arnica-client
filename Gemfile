@@ -18,6 +18,7 @@ group :jekyll_plugins do
   gem "jekyll-paginate-v2"
   gem 'jekyll-tagging'
   gem 'jekyll-archives'
+  gem 'jekyll-sass-converter'
 end
 
 # Add necessary libraries that will no longer be part of the default gems in Ruby 3.4.0

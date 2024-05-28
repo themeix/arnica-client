@@ -66,7 +66,23 @@
       <title>{% if page.title %} {{page.title}} {% else %} {{site.title}} {% endif %}</title>
       <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon"/>
       <!-- gulp:css -->
-      <link rel="stylesheet" href="/assets/css/app.min.css">
+   
+      <style>
+         {% capture include_to_scssify %}
+           {% include main.scss %}
+         {% endcapture %}
+         {{ include_to_scssify | scssify }}
+       </style>
+
+      <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/css/fontawesome.min.css' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/css/animate.min.css' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/css/slicknav.min.css' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/css/default.css' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/css/prism.css' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/css/owl.carousel.min.css' | relative_url }}"> 
+      
+
       <link rel="stylesheet" href="/assets/css/fix.css">
       <!-- endgulp -->
       <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
@@ -81,8 +97,20 @@
       {{content}}
       {% include footer.html %}
       <!-- gulp:js -->
-      <script src="/assets/js/build.min.js"></script>
-      <!-- endgulp -->
-      <script src="/assets/js/loadmore.js"></script>
+          <!-- JavaScript files -->
+    <script src="{{ '/assets/js/jquery-3.3.1.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/owl.carousel.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/jquery.slicknav.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/prism.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/jquery.fitvids.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/wow.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/loadmore.js' | relative_url }}"></script>
+
+    <!-- Additional scripts specific to your site -->
+
+ 
    </body>
 </html>

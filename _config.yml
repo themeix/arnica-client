@@ -76,3 +76,6 @@ feed:
   collections:
     posts:
       path: "/index.xml"
+sass:
+  sass_dir: _sass
+  style: compressed
