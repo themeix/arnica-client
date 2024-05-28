@@ -16,7 +16,7 @@ init_wp
 /nbproject/
 .project
 npm-debug.log
-.idea
+.idea 
 .history
 
 # composer
