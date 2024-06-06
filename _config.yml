@@ -18,6 +18,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-archives
+  
+permalink: pretty
 
 pagination:
   enabled: true
